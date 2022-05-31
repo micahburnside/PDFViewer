@@ -8,7 +8,7 @@
 import UIKit
 import PDFKit
 
-class ViewController: BaseViewController {
+class ViewController: BaseViewController, PDFViewDelegate {
     
 let pdfView = PDFView()
     
@@ -23,7 +23,16 @@ let pdfView = PDFView()
             return
         }
         pdfView.document = document
-
+        pdfView.delegate = self
+        
+        /// create new PDF Document
+//        let newDocument = PDFDocument()
+//        guard let page = PDFPage(image: UIImage(systemName: "house")!) else {
+//            return
+//        }
+//        newDocument.insert(page, at: 0)
+//        pdfView.document = newDocument
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
