@@ -25,13 +25,16 @@ let pdfView = PDFView()
         pdfView.document = document
         pdfView.delegate = self
         
-        /// create new PDF Document
-//        let newDocument = PDFDocument()
-//        guard let page = PDFPage(image: UIImage(systemName: "house")!) else {
-//            return
+//        /// create new PDF Document
+//        func createPDF() {
+//            let newDocument = PDFDocument()
+//            guard let page = PDFPage(image: UIImage(systemName: "house")!) else {
+//                return
+//            }
+//            newDocument.insert(page, at: 0)
+//            pdfView.document = newDocument
 //        }
-//        newDocument.insert(page, at: 0)
-//        pdfView.document = newDocument
+
         
     }
     override func viewDidLayoutSubviews() {
